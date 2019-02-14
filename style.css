@@ -1,0 +1,10 @@
+/*Style doc*/
+body{
+    background-size: auto;
+    background-color: green;
+}
+#display{
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+}
