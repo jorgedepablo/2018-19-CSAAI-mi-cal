@@ -1,6 +1,9 @@
 /*Javascript file*/
 function main() {
-    var gui  ={
+    var cal ={
+      gui: {
+        display1:document.getElementById('display1'),
+        display2:document.getElementById('display2'),
         b1:document.getElementById('b1'),
         b2:document.getElementById('b2'),
         b3:document.getElementById('b3'),
@@ -16,71 +19,65 @@ function main() {
         bdivided:document.getElementById('b/'),
         bby:document.getElementById('bx'),
         bequal:document.getElementById('b='),
-        bdel:document.getElementById('bDEL')
+        bdot:document.getElementById('b.')
+      },
+
+      add_element: function(input){
+        this.gui.display2.innerHTML += input;
+      },
+
+      calc_result: function(){
+        
+      }
     }
 
-    gui.b1.onclick = () => {
-       var display = document.getElementById('display');
-       display.innerHTML += gui.b1.name;
+    cal.gui.b1.onclick = () => {
+       cal.add_element(cal.gui.b1.name);
     }
-    gui.b2.onclick = () => {
-       var display = document.getElementById('display');
-       display.innerHTML += gui.b2.name;
+    cal.gui.b2.onclick = () => {
+       cal.add_element(cal.gui.b2.name);
     }
-    gui.b3.onclick = () => {
-       var display = document.getElementById('display');
-       display.innerHTML += gui.b3.name;
+    cal.gui.b3.onclick = () => {
+       cal.add_element(cal.gui.b3.name);
     }
-    gui.b4.onclick = () => {
-       var display = document.getElementById('display');
-       display.innerHTML += gui.b4.name;
+    cal.gui.b4.onclick = () => {
+       cal.add_element(cal.gui.b4.name);
     }
-    gui.b5.onclick = () => {
-       var display = document.getElementById('display');
-       display.innerHTML += gui.b5.name;
+    cal.gui.b5.onclick = () => {
+       cal.add_element(cal.gui.b5.name);
     }
-    gui.b6.onclick = () => {
-       var display = document.getElementById('display');
-       display.innerHTML += gui.b6.name;
+    cal.gui.b6.onclick = () => {
+       cal.add_element(cal.gui.b6.name);
     }
-    gui.b7.onclick = () => {
-       var display = document.getElementById('display');
-       display.innerHTML += gui.b7.name;
+    cal.gui.b7.onclick = () => {
+       cal.add_element(cal.gui.b7.name);
     }
-    gui.b8.onclick = () => {
-       var display = document.getElementById('display');
-       display.innerHTML += gui.b8.name;
+    cal.gui.b8.onclick = () => {
+       cal.add_element(cal.gui.b8.name);
     }
-    gui.b9.onclick = () => {
-       var display = document.getElementById('display');
-       display.innerHTML += gui.b9.name;
+    cal.gui.b9.onclick = () => {
+       cal.add_element(cal.gui.b9.name);
     }
-    gui.b0.onclick = () => {
-       var display = document.getElementById('display');
-       display.innerHTML += gui.b0.name;
+    cal.gui.b0.onclick = () => {
+       cal.add_element(cal.gui.b0.name);
     }
-    gui.bplus.onclick = () => {
-       var display = document.getElementById('display');
-       display.innerHTML += gui.bplus.name;
+    cal.gui.bdot.onclick = () => {
+       cal.add_element(cal.gui.bdot.name);
     }
-    gui.bminus.onclick = () => {
-       var display = document.getElementById('display');
-       display.innerHTML += gui.bminus.name;
+    cal.gui.bplus.onclick = () => {
+       cal.add_element(cal.gui.bplus.name);
     }
-    gui.bdivided.onclick = () => {
-       var display = document.getElementById('display');
-       display.innerHTML += gui.bdivided.name;
+    cal.gui.bminus.onclick = () => {
+       cal.add_element(cal.gui.bminus.name);
     }
-    gui.bdby.onclick = () => {
-       var display = document.getElementById('display');
-       display.innerHTML += gui.bdby.name;
+    cal.gui.bby.onclick = () => {
+       cal.add_element(cal.gui.bby.name);
     }
-    gui.bdel.onclick = () => {
-       var display = document.getElementById('display');
-       display.innerHTML =  "";
-     //borrar del display
+    cal.gui.bdivided.onclick = () => {
+       cal.add_element(cal.gui.bdivided.name);
     }
-    gui.bequal.onclick = () => {
-       //Llamar a la funcion que calcule
+    cal.gui.bdot.onclick = () => {
+      cal.calc_result();
     }
+
 }
