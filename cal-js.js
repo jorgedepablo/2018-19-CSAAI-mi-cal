@@ -27,8 +27,10 @@ function main() {
       },
 
       calc_result: function(){
-        
-      }
+         var exp = document.getElementById("display2").innerText
+         this.gui.display2.innerHTML = "";
+         this.gui.display1.innerHTML = exp;
+     },
     }
 
     cal.gui.b1.onclick = () => {
@@ -63,7 +65,7 @@ function main() {
     }
     cal.gui.bdot.onclick = () => {
        cal.add_element(cal.gui.bdot.name);
-    }
+   }
     cal.gui.bplus.onclick = () => {
        cal.add_element(cal.gui.bplus.name);
     }
@@ -76,7 +78,7 @@ function main() {
     cal.gui.bdivided.onclick = () => {
        cal.add_element(cal.gui.bdivided.name);
     }
-    cal.gui.bdot.onclick = () => {
+    cal.gui.bequal.onclick = () => {
       cal.calc_result();
     }
 
