@@ -27,10 +27,18 @@ function main() {
       },
 
       calc_result: function(){
-         var exp = document.getElementById("display2").innerText
-         this.gui.display2.innerHTML = "";
-         this.gui.display1.innerHTML = exp;
-     },
+        answer();
+        this.gui.display2.innerHTML = "";
+      },
+
+      answer: function(){
+        var exp = document.getElementById("display2").innerText
+        var plus = exp.search('+');
+        var minus = exp.search('-');
+        var by = exp.search('x');
+        var div = exp.search('/');
+        this.gui.display1.innerHTML = exp;
+      }
     }
 
     cal.gui.b1.onclick = () => {
