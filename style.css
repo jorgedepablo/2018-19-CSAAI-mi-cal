@@ -1,7 +1,16 @@
 /*Style doc*/
 body{
     background-size: auto;
-    background-color: green;
+    background-color: white;
+}
+#content{
+  width: 300px;
+  margin: 0 auto;
+  border: 2px solid BLACK;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
 }
 .display{
     background-color: white;
