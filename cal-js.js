@@ -18,7 +18,7 @@ function main() {
         bminus:document.getElementById('b-'),
         bdivided:document.getElementById('b/'),
         bby:document.getElementById('bx'),
-        bequal:document.getElementById('b='),
+        bequal:document.getElementById('bequal'),
         bdot:document.getElementById('b.')
       },
 
