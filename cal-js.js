@@ -27,17 +27,38 @@ function main() {
       },
 
       calc_result: function(){
-        answer();
+        this.answer();
         this.gui.display2.innerHTML = "";
       },
 
       answer: function(){
-        var exp = document.getElementById("display2").innerText
-        var plus = exp.search('+');
-        var minus = exp.search('-');
-        var by = exp.search('x');
-        var div = exp.search('/');
-        this.gui.display1.innerHTML = exp;
+        var data = document.getElementById("display2").innerText
+        var op1 = 0
+        var op2 = 0
+        var ans = 0
+        if (data.includes('+')){
+          op1 = data.split('+')[0];
+          op2 = data.split('+')[1];
+          ans = parseFloat(op1) + parseFloat(op2);
+        }else if (data.includes('-')) {
+          op1 = data.split('-')[0];
+          op2 = data.split('-')[1];
+          ans = parseFloat(op1) - parseFloat(op2);
+        }else if (data.includes('x')) {
+          op1 = data.split('x')[0];
+          op2 = data.split('x')[1];
+          ans = parseFloat(op1) * parseFloat(op2);
+        }else if (data.includes('/')) {
+          op1 = data.split('/')[0];
+          op2 = data.split('/')[1];
+          ans = parseFloat(op1)/parseFloat(op2);
+        }else {
+          ans = 'SINTAX ERROR';
+        }
+        if (isNaN(ans)){
+          ans = 'SINTAX ERROR'
+        }
+        this.gui.display1.innerHTML = ans;
       }
     }
 
@@ -89,5 +110,4 @@ function main() {
     cal.gui.bequal.onclick = () => {
       cal.calc_result();
     }
-
 }
